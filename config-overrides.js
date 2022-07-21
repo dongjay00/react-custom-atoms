@@ -2,6 +2,14 @@ const {
   useBabelRc,
   removeModuleScopePlugin,
   override,
-} = require("customize-cra");
+  addWebpackAlias,
+} = require('customize-cra');
+const path = require('path');
 
-module.exports = override(useBabelRc(), removeModuleScopePlugin());
+module.exports = override(
+  useBabelRc(),
+  removeModuleScopePlugin(),
+  addWebpackAlias({
+    '@': path.resolve(__dirname, 'src'),
+  }),
+);
