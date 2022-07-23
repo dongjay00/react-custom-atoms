@@ -1,7 +1,6 @@
 import React from 'react';
+import { Font } from '@/components/atoms';
 
-function App() {
-  return <div>React Custom Atoms</div>;
+export default function App() {
+  return <Font>React Custom Atoms</Font>;
 }
-
-export default App;
